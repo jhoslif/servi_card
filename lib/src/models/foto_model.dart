@@ -1,15 +1,21 @@
-import 'package:meta/meta.dart';
+import 'dart:convert';
 
-class Prueba extends StatefulWidget {
-  Prueba({Key? key}) : super(key: key);
+Foto fotoFromJson(String str) => Foto.fromJson(json.decode(str));
 
-  @override
-  _PruebaState createState() => _PruebaState();
-}
+String fotoToJson(Foto data) => json.encode(data.toJson());
 
-class _PruebaState extends State<Prueba> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
+class Foto {
+    Foto({
+        this.url,
+    });
+
+    String ?url;
+
+    factory Foto.fromJson(Map<String, dynamic> json) => Foto(
+        url: json["url"],
+    );
+
+    Map<String, dynamic> toJson() => {
+        "url": url,
+    };
 }
