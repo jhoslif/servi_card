@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:servi_card/src/models/cliente_model.dart';
+import "package:servi_card/src/models/cliente_model.dart";
 import 'package:servi_card/src/models/foto_model.dart';
 
 Pedido pedidoFromJson(String str) => Pedido.fromJson(json.decode(str));
