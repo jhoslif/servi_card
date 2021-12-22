@@ -17,7 +17,7 @@ class _PendientesWidgetState extends State<PendientesWidget> {
   @override
   void initState() {
     super.initState();
-    _downloadMantenimientos();
+    _downloadPendidos();
   }
 
   @override
@@ -38,7 +38,7 @@ class _PendientesWidgetState extends State<PendientesWidget> {
     );
   }
 
-  _downloadMantenimientos() async {
+  _downloadPendidos() async {
     _listaPedidos = await _pedidoService.getPedido();
     setState(() {});
   }
